@@ -1,0 +1,7 @@
+New quote request from {{ quote.full_name }} in {{ quote.city.name }}.
+
+{% if quote.special_offer %}
+Special offer {{ quote.special_offer.name }} was used.
+{% endif %}
+
+Login to the admin console for more info: https://www.rayofsunlawns.com/admin/quote/quote/?reviewed__exact=0

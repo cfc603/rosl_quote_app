@@ -1,0 +1,23 @@
+{% extends "quote/_base.html" %}
+{% load bootstrap4 %}
+
+{% block description %}Quote request from Ray of Sun Lawns, LLC has been received.{% endblock description %}
+
+{% block title %}Quote Request Success!{% endblock title %}
+
+{% block content %}
+    <section class="page-section cta" id="success_message">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-5">
+                            <span class="section-heading-lower">Success!</span>
+                        </h2>
+                        <p>Thank you for reaching out. We will reach out by phone within the next 24 hours to schedule a time to take a look at your property.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}

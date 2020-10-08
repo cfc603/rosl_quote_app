@@ -1,0 +1,31 @@
+{% extends "quote/_base.html" %}
+{% load bootstrap4 %}
+
+{% block description %}Request a quote from Ray of Sun Lawns, LLC{% endblock description %}
+
+{% block title %}Get a Quote{% endblock title %}
+
+{% block content %}
+    <section class="page-section cta">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-9 mx-auto">
+                    <div class="cta-inner text-center rounded">
+                        <h2 class="section-heading mb-5">
+                            <span class="section-heading-lower">Get a Quote</span>
+                        </h2>
+                        <p>
+                            <form action="{% url 'quote:quote_create' %}" method="POST" class="form-horizontal">
+                                {% csrf_token %}
+                                {% bootstrap_form form layout="horizontal" %}
+                                {% buttons %}
+                                    <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                                {% endbuttons %}
+                            </form>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock content %}
